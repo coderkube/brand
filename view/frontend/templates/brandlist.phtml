@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+$isEnable = $this->helper('Coderkube\Brand\Helper\Data')->getConfig('coderkubebrand/general_settings/enable');
+if ($isEnable == 1):
+    $collection = $this->getBrandCollection();
+    ?>
+    <section>
+        <div class="brand-list-wrapper">
+            <div class="brand-container">
+                <?php foreach ($collection as $brand): ?>
+                    <div class="row">
+                        <div class="all brands">
+                            <div class="brand-image">
+                                <?php if ($brand->getImage()): ?>
+                                    <img class="images" width="70" height="70" src="<?php echo $block->getMediaUrl() . $brand->getImage(); ?>">
+                                <?php else: ?>
+                                    <img class="images" width="70" height="70" src="<?php echo $block->getViewFileUrl('Coderkube_Brand::images/place.png'); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <div class="brand-name">
+                                <?php if ($brand->getUrl()): ?>
+                                    <a href="<?php echo $this->getUrl('brand') . $brand->getUrl() ?>"><?php echo $brand->getName(); ?></a>
+                                <?php else: ?>
+                                    <a href="<?php echo $this->getUrl('brand/brand/view', ['id' => $brand->getId()]); ?>"><?php echo $brand->getName(); ?></a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+    <?php
+endif;
+?>

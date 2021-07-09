@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Coderkube\Brand\Block\Brand\View" name="brandview.description" template="Coderkube_Brand::brand/description.phtml" />
+            <block class="Coderkube\Brand\Block\Brand\View" name="brandview.list" template="Coderkube_Brand::brand/view.phtml">
+                <block class="Coderkube\Brand\Block\Brand\Product\ListProduct" name="brand.products.list" as="brandproduct_list" template="Magento_Catalog::product/list.phtml">
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

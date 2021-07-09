@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Backend/etc/menu.xsd">
+  <menu>
+    <add id="Coderkube_Brand::main_option" title="Shop By Brand" module="Coderkube_Brand" sortOrder="30" resource="Coderkube_Brand::main_option"/>
+    <add id="Coderkube_Brand::manage_brand" title="Manage Brand" module="Coderkube_Brand" sortOrder="42" parent="Coderkube_Brand::main_option" action="brand/brand/index" resource="Coderkube_Brand::brand"/>
+    <add id="Coderkube_Brand::Coderkube" title="Configure Brands" module="Coderkube_Brand" sortOrder="45" parent="Coderkube_Brand::main_option" action="adminhtml/system_config/edit/section/brand" resource="Coderkube_Brand::config_brands"/>
+  </menu>
+</config>

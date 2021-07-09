@@ -1,0 +1,125 @@
+.brand-list-wrapper .brand-image {
+    background-color: #ffffff;
+    height: 140px;
+    width: 140px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.brand-list-wrapper .brand-image .images {
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+.brand-list-wrapper .brand-name {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+@media (min-width: 640px) {
+    .products-grid .product-item-inner {
+        bottom: -44px !important;
+    }
+}
+.brand-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.brand-container .row {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%;
+    max-width: 15%;
+    padding: 0 15px;
+    margin-top: 15px;
+}
+.brand-container .row .brand-image > img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+.brand-name > a {
+    color: #006bb4;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.brand-image {
+    background-color: #ffffff;
+    height: 140px;
+    width: 140px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.brand-container .brand-name {
+    margin-top: 15px;
+}
+.brand-container .all.brands {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    padding: 7px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 1199px) {
+    .brand-container .row {
+        -ms-flex: 0 0 18%;
+        -webkit-box-flex: 0;
+        flex: 0 0 18%;
+        max-width: 18%;
+    }
+}
+@media (max-width: 1024px) {
+    .brand-container .row {
+        -ms-flex: 0 0 20%;
+        -webkit-box-flex: 0;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (max-width: 991px) {
+    .brand-container .row {
+        -ms-flex: 0 0 25%;
+        -webkit-box-flex: 0;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+@media (max-width: 575px) {
+    .brand-container .row {
+        -ms-flex: 0 0 40%;
+        -webkit-box-flex: 0;
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+}

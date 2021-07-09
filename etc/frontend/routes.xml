@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route  frontName="brand" id="brand">
+            <module name="Coderkube_Brand" />
+        </route>
+    </router>
+</config>

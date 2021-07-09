@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getViewFileUrl('Coderkube_Brand::css/owl.carousel.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo $this->getViewFileUrl('Coderkube_Brand::css/owl.theme.default.css') ?>">
+<?php
+$isEnable = $this->helper('Coderkube\Brand\Helper\Data')->getConfig('coderkubebrand/general_settings/enable');
+if ($isEnable == 1):
+    $collection = $this->getBrandCollection();
+    ?>
+  <div class="content-heading">
+    <h2 class="title">Shop by Brand</h2>
+  </div>
+  <section id="demos">
+    <div class="brand-list-wrapper">
+      <div class="owl-carousel owl-theme">
+        <?php foreach ($collection as $brand): ?>
+          <div class="item">
+            <div class="all brands">
+              <div class="brand-image">
+                <?php if ($brand->getImage()): ?>
+                  <img class="images" width="70" height="70" src="<?php echo $block->getMediaUrl() . $brand->getImage(); ?>">
+                <?php else: ?>
+                  <img class="images" width="70" height="70" src="<?php echo $block->getViewFileUrl('Coderkube_Brand::images/place.png'); ?>" />
+                <?php endif; ?>
+              </div>
+              <div class="brand-name">
+                <?php if ($brand->getUrl()): ?>
+                  <a href="<?php echo $this->getUrl('brand') . $brand->getUrl() ?>"><?php echo $brand->getName(); ?></a>
+                <?php else: ?>
+                  <a href="<?php echo $this->getUrl('brand/brand/view', ['id' => $brand->getId()]); ?>"><?php echo $brand->getName(); ?></a>
+                <?php endif; ?>
+              </div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+<script>
+  require([
+    'jquery',
+    'Coderkube_Brand/js/owl.carousel',
+  ], function($) {
+    jQuery(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        margin: 10,
+        nav: false,
+        loop: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
+        }
+      });
+    });
+  });
+</script>

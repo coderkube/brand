@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="brand_brand_edit"/>
+    <body/>
+</page>

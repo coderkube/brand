@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+ -->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <container name="root" label="Root">
+        <block class="Coderkube\Brand\Block\Adminhtml\Brand\Edit\Tab\Products" name="coderkube_brand_brand.edit.tab.products"/>
+        <block class="Magento\Backend\Block\Widget\Grid\Serializer" name="related_grid_serializer">
+            <arguments>
+                <argument name="input_names" xsi:type="string">product_position</argument>
+                <argument name="grid_block" xsi:type="string">coderkube_brand_brand.edit.tab.products</argument>
+                <argument name="callback" xsi:type="string">getSelectedBrandProducts</argument>
+                <argument name="input_element_name" xsi:type="string">links[related]</argument>
+                <argument name="reload_param_name" xsi:type="string">products_related</argument>
+            </arguments>
+        </block>
+    </container>
+</layout>

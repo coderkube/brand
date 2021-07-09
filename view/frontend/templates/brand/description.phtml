@@ -1,0 +1,16 @@
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+ -->
+<?php if ($description = $block->getBrand()->getDescription()): ?>
+    <div class="ck-brand-description">
+        <?php
+        echo $this->helper('Coderkube\Brand\Helper\Data')->description($description)
+        ?>
+    </div>
+<?php endif; ?>

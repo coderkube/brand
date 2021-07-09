@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+ -->
+<page layout="3columns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+    <head>
+        <css src="Coderkube_Brand::css/brand.css" />
+    </head>
+    <body>
+        <referenceBlock name="header.links">
+            <block class="Coderkube\Brand\Block\HeaderLink" ifconfig="coderkubebrand/general_settings/enable" name="brand-header-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Shop By Brand</argument>
+                    <argument name="path" xsi:type="string" translate="true">brand</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="footer_links">
+            <block class="Coderkube\Brand\Block\FooterLink" ifconfig="coderkubebrand/general_settings/enable" name="brand-footer-link" after="privacy-policy-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Shop By Brand</argument>
+                    <argument name="path" xsi:type="string" translate="true">brand</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

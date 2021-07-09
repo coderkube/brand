@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_product_edit_action">
+        <observer name="ck_brand_loadbrandproduct" instance="Coderkube\Brand\Observer\LoadBrandProduct" />
+    </event>
+    <event name="controller_action_catalog_product_save_entity_after">
+        <observer name="ck_brand_savebrandproduct" instance="Coderkube\Brand\Observer\SaveBrandProduct" />
+    </event>
+    <event name="catalog_product_save_after">
+        <observer name="ck_brand_savebrandproduct" instance="Coderkube\Brand\Observer\SaveBrandProductModel" />
+    </event>
+    <event name="catalog_product_attribute_update_after">
+    	<observer name="ck_brand_saveattributebrandproduct" instance="Coderkube\Brand\Observer\AttributeBrandProductModel" />
+    </event>
+</config>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Model\Layer" type="Coderkube\Brand\Model\Layer" />
+    <type name="Coderkube\Brand\Model\Layer\Resolver">
+        <arguments>
+            <argument name="layersPool" xsi:type="array">
+                <item name="ckbrand" xsi:type="string">Coderkube\Brand\Model\Layer\Brand</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Coderkube\Brand\Model\Layer\Brand">
+        <arguments>
+            <argument name="context" xsi:type="object">Magento\Catalog\Model\Layer\Category\Context</argument>
+        </arguments>
+    </type>
+    <type name="Coderkube\Brand\Block\Brand\Product\ListProduct">
+        <arguments>
+            <argument name="layerResolver" xsi:type="object">Coderkube\Brand\Model\Layer\Resolver</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="brand_form_add_listing_data_source" xsi:type="string">Coderkube\Brand\Model\ResourceModel\Brand\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Coderkube\Brand\Model\ResourceModel\Brand\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">ck_brand</argument>
+            <argument name="resourceModel" xsi:type="string">Coderkube\Brand\Model\ResourceModel\Brand</argument>
+        </arguments>
+    </virtualType>
+</config>

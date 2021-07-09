@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CoderkubeTeam
+ * Copyright(C) 06/2020 CoderkubeTeam <support@coderkube.com>
+ * @package Coderkube_Brand
+ * @copyright Copyright(C) 06/2020 CoderkubeTeam (https://coderkube.com/)
+ * @author CoderkubeTeam <support@coderkube.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Framework\App\RouterList">
+		<arguments>
+			<argument name="routerList" xsi:type="array">
+				<item name="customer" xsi:type="array">
+					<item name="class" xsi:type="string">Coderkube\Brand\Controller\Router</item>
+					<item name="disable" xsi:type="boolean">false</item>
+					<item name="sortOrder" xsi:type="string">0</item>
+				</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
